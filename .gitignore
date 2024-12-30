@@ -10,10 +10,6 @@ target/
 .classpath
 .project
 
-#Intellij IDEA
-.idea
-*.iml
-
 #Branch switching
 generated/
 
