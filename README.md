@@ -1,4 +1,4 @@
-# Pet-Clinic-Microservices-Application
+# Spring PetClinic Microservices
 
 Enterprise-level application demonstrating microservices architecture using Spring Cloud, featuring service discovery, API gateway, and advanced monitoring capabilities
 
