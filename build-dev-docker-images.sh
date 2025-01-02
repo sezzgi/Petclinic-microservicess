@@ -6,5 +6,5 @@ docker build  -t "petclinic-customers-service:dev" ./spring-petclinic-customers-
 docker build  -t "petclinic-discovery-server:dev" ./spring-petclinic-discovery-server
 docker build  -t "petclinic-vets-service:dev" ./spring-petclinic-vets-service
 docker build  -t "petclinic-visits-service:dev" ./spring-petclinic-visits-service
-# docker build  -t "petclinic-grafana-server:dev" ./docker/grafana
-# docker build  -t "petclinic-prometheus-server:dev" ./docker/prometheus
+docker build  -t "petclinic-grafana-server:dev" ./docker/grafana
+docker build  -t "petclinic-prometheus-server:dev" ./docker/prometheus

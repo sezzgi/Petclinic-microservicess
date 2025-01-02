@@ -1,0 +1,21 @@
+#Maven
+target/
+! .mvn/wrapper/maven-wrapper.jar
+
+# Jenv
+.java-version
+
+# Eclipse
+.settings/
+.classpath
+.project
+
+#Branch switching
+generated/
+
+#Vs code
+.factorypath
+.project
+
+#Terraform
+**/.terraform/
