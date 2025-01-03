@@ -1,0 +1,28 @@
+{
+  "groups": [
+    {
+      "name": "vets",
+      "type": "org.springframework.samples.petclinic.vets.system.VetsProperties",
+      "sourceType": "org.springframework.samples.petclinic.vets.system.VetsProperties"
+    },
+    {
+      "name": "vets.cache",
+      "type": "org.springframework.samples.petclinic.vets.system.VetsProperties$Cache",
+      "sourceType": "org.springframework.samples.petclinic.vets.system.VetsProperties",
+      "sourceMethod": "public org.springframework.samples.petclinic.vets.system.VetsProperties.Cache getCache() "
+    }
+  ],
+  "properties": [
+    {
+      "name": "vets.cache.heap-size",
+      "type": "java.lang.Integer",
+      "sourceType": "org.springframework.samples.petclinic.vets.system.VetsProperties$Cache"
+    },
+    {
+      "name": "vets.cache.ttl",
+      "type": "java.lang.Integer",
+      "sourceType": "org.springframework.samples.petclinic.vets.system.VetsProperties$Cache"
+    }
+  ],
+  "hints": []
+}
