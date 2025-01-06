@@ -12,12 +12,12 @@ pipeline{
     }
     stages {
         stage('Create ECR Repo') {
-        steps {
-            script {
-                echo "Creating ECR Repo for ${APP_NAME} app"
-                sh '''
-                # Check if the repository exists, and create it if it doesn't
-                if ! aws ecr describe-repositories --region ${AWS_REGION} --repository-names ${APP_REPO_NAME}; then
+            steps {
+                script {
+                    echo "Creating ECR Repo for ${APP_NAME} app"
+                    sh '''
+                    # Check if the repository exists, and create it if it doesn't
+                    if ! aws ecr describe-repositories --region ${AWS_REGION} --repository-names ${APP_REPO_NAME}; then
                     echo "Repository does not exist. Creating now..."
                     aws ecr create-repository \
                         --repository-name ${APP_REPO_NAME} \
@@ -29,9 +29,9 @@ pipeline{
                     echo "Repository ${APP_REPO_NAME} already exists."
                 fi
                 '''
+                }
             }
         }
-    }
         }
         stage('Package Application') {
             steps {
@@ -40,7 +40,7 @@ pipeline{
                 sh ". ./package-with-mvn-wrapper.sh"            
             }
         }
-          stage('Prepare Tags for Docker Images') {
+        stage('Prepare Tags for Docker Images') {
             steps {
                 echo 'Preparing Tags for Docker Images'
                 script {
