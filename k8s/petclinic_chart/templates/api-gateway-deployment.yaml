@@ -31,9 +31,12 @@ spec:
         io.kompose.service: api-gateway
     spec:
       initContainers:
+        - name: init-config-server    # Add this init container first
+          image: busybox
+          command: ['sh', '-c', 'until nc -z config-server:8888; do echo waiting for config-server; sleep 2; done;']
         - name: init-discovery-server
           image: busybox
-          command: ['sh', '-c', 'until nc -z discovery-server:8761; do echo waiting for discovery-server; sleep 2; done;']      
+          command: ['sh', '-c', 'until nc -z discovery-server:8761; do echo waiting for discovery-server; sleep 2; done;']   
       containers:
         - image: '{{ .Values.IMAGE_TAG_API_GATEWAY }}'
           name: api-gateway
